@@ -6,6 +6,7 @@ import { HashRouter as Router, Route } from 'react-router-dom'
 import Header from '../Header/Header'
 import Intro from '../Intro/Intro'
 import Projects from '../Projects/Projects'
+import Contact from '../Contact/Contact'
 import Footer from '../Footer/Footer'
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
           <div id="mainContent">
             <Intro />
             <Projects />
+            <Contact />
           </div>
           <Route path='/' component={Footer} />
         </Router>
