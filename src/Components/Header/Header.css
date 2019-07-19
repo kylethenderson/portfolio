@@ -1,0 +1,31 @@
+#header {
+    background-color: transparent;
+    position: relative;
+    top: 15px;
+}
+
+div.MuiDrawer-paperAnchorTop{
+    /* background: linear-gradient(rgba(34, 34, 34, 1),rgba(34, 34, 34, .825)); */
+    background: transparent;
+    text-align: right;
+    box-shadow: none;
+    padding-right: 25px;
+    z-index: 1000;
+}
+
+div.MuiDrawer-paperAnchorTop p {
+    color: rgba(256, 256, 256, .9);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 10px 0px;
+}
+
+#header span {
+    opacity: 1;
+    transition: .375s;
+    font-size: 2rem;
+    color: rgba(256, 256, 256, .9);
+}
+#header span.hidden {
+    opacity: 0
+}

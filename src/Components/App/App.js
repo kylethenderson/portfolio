@@ -3,7 +3,7 @@ import './App.css';
 
 // Components
 import Header from '../Header/Header'
-
+import Intro from '../Intro/Intro'
 import Footer from '../Footer/Footer'
 
 class App extends Component {
@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div className="app">
         <Header />
-        <h1>Portfolio</h1>
+        <Intro />
         <Footer />
       </div>
     );

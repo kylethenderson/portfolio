@@ -1,3 +1,6 @@
 .app {
     height: 100%;
 }
+.grid-item-text-center {
+    text-align: center;
+}

@@ -1,0 +1,5 @@
+#intro {
+    background: linear-gradient(rgba(34, 34, 34, 1),rgba(34, 34, 34, .825), rgba(34, 34, 34, .75), rgba(34, 34, 34, .825), rgba(34, 34, 34, 1)), url("../../assets/background.jpg") no-repeat center; 
+    background-size: cover; 
+    height: 90vh;
+}
