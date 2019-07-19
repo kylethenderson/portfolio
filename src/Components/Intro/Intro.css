@@ -3,3 +3,29 @@
     background-size: cover; 
     height: 90vh;
 }
+
+#introGridWrapper {
+    height: 100%;
+}
+
+#intro h1 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 2.75rem;
+}
+
+#intro h5 {
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1.5rem;
+    margin: 0;
+    font-size: .9rem;
+}
+
+#intro button {
+    border-color: rgba(256, 256, 256, .9);
+    color: rgba(256, 256, 256, .9);
+    margin-top: 40px;
+    letter-spacing: 2px;
+}
