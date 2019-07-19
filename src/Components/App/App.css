@@ -4,3 +4,7 @@
 .grid-item-text-center {
     text-align: center;
 }
+
+#mainContent {
+    padding-bottom: 50px;
+}

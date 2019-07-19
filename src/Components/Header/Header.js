@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Icon from '@material-ui/core/Icon'
 import Grid from '@material-ui/core/Grid'
 import Drawer from '@material-ui/core/Drawer'
+import { Link } from 'react-router-dom'
 
 import './Header.css'
 
@@ -26,18 +27,15 @@ class Header extends Component {
                     </Grid>
                 </Grid>
                 <Drawer anchor="top" open={this.state.drawerOpen} onClose={this.toggleDrawer}>
-                    <p>
-                        About
-                    </p>
-                    <p>
+                    <Link to=''>
                         Projects
-                    </p>
-                    <p>
+                    </Link>
+                    <Link to=''>
                         Contact
-                    </p>
-                    <p>
+                    </Link>
+                    <Link to=''>
                         Blog
-                    </p>
+                    </Link>
                 </Drawer>
             </div>
         )
