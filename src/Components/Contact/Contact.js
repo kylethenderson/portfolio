@@ -5,108 +5,147 @@ import axios from 'axios'
 import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
+import Dialog from '@material-ui/core/Dialog'
 
 import './Contact.css'
 
 class Contact extends Component {
 
     state = {
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
+        messageContent: {
+            name: '',
+            email: '',
+            subject: '',
+            message: '',
+        },
+        success: false,
+        error: false,
     }
 
     handleChange = (event) => {
         this.setState({
-            ...this.state, [event.target.id]: event.target.value,
+            ...this.state, messageContent: {
+                ...this.state.messageContent, [event.target.id]: event.target.value
+            }
+        })
+    }
+
+    toggleDialog = (dialog) => {
+        this.setState({
+            ...this.state, [dialog]: !this.state[dialog],
         })
     }
 
     sendEmail = () => {
         // send message function here.
-        console.log(this.state);
-        this.setState({
-            name: '',
-            email: '',
-            subject: '',
-            message: '',
-        })
+        if (Object.keys(this.state.messageContent).every((key) => this.state.messageContent[key] !== '')) {
+            axios.post('/api/contact', this.state.messageContent)
+                .then(response => {
+                    this.toggleDialog('success');
+                    this.setState({
+                        ...this.state,
+                        messageContent: {
+                            name: '',
+                            email: '',
+                            subject: '',
+                            message: '',
+                        },
+                    })
+                })
+                .catch(error => {
+                    console.log('There was an issue.', error);
+                })        
+        }
+        else {
+            this.toggleDialog('error');
+        }
     }
 
     render() {
         return (
-            <div id="contact">
-                <Grid container justify="center" id="contact">
-                    <Grid item xs={8} className="grid-item-text-center">
-                        <h1 className="grid-item-text-center">
-                            Contact Me
+            <>
+                <div id="contact">
+                    <Grid container justify="center" id="contact">
+                        <Grid item xs={8} className="grid-item-text-center">
+                            <h1 className="grid-item-text-center">
+                                Contact Me
                     </h1>
+                        </Grid>
                     </Grid>
-                </Grid>
-                <Grid container justify="center">
-                    <Grid item xs={12} sm={9} md={6} container justify="center" id="inputWrapper">
-                        <Grid item xs={12} className="grid-item-text-center">
-                            <p>
-                                I'm happy to answer any questions or inquiries
+                    <Grid container justify="center">
+                        <Grid item xs={12} sm={9} md={6} container justify="center" id="inputWrapper">
+                            <Grid item xs={12} className="grid-item-text-center">
+                                <p>
+                                    I'm happy to answer any questions or inquiries
                             </p>
-                        </Grid>
-                        <Grid item xs={12}>
-                            <TextField
-                                id="name"
-                                label="Name"
-                                type="text"
-                                value={this.state.name}
-                                onChange={this.handleChange}
-                                margin="normal"
-                                fullWidth
-                                autoComplete="off"
-                            />
-                        </Grid>
-                        <Grid item xs={12}>
-                            <TextField
-                                id="email"
-                                type="email"
-                                label="Email"
-                                value={this.state.email}
-                                onChange={this.handleChange}
-                                margin="normal"
-                                fullWidth
-                                autoComplete="off"
-                            />
-                        </Grid>
-                        <Grid item xs={12}>
-                            <TextField
-                                id="subject"
-                                type="text"
-                                label="Subject"
-                                value={this.state.subject}
-                                onChange={this.handleChange}
-                                margin="normal"
-                                fullWidth
-                                autoComplete="off"
-                            />
-                        </Grid>
-                        <Grid item xs={12}>
-                            <TextField
-                                id="message"
-                                type="text"
-                                label="Message"
-                                value={this.state.message}
-                                onChange={this.handleChange}
-                                margin="normal"
-                                fullWidth
-                                autoComplete="off"
-                                multiline
-                                rows="6"
-                            />
-                        </Grid>
-                        <Grid item xs={12} className="grid-item-text-center">
-                            <Button variant="outlined" size="large" onClick={this.sendEmail}>Send it</Button>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <TextField
+                                    id="name"
+                                    label="Name"
+                                    type="text"
+                                    value={this.state.messageContent.name}
+                                    onChange={this.handleChange}
+                                    margin="normal"
+                                    fullWidth
+                                    autoComplete="off"
+                                    required
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <TextField
+                                    id="email"
+                                    type="email"
+                                    label="Email"
+                                    value={this.state.messageContent.email}
+                                    onChange={this.handleChange}
+                                    margin="normal"
+                                    fullWidth
+                                    autoComplete="off"
+                                    required
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <TextField
+                                    id="subject"
+                                    type="text"
+                                    label="Subject"
+                                    value={this.state.messageContent.subject}
+                                    onChange={this.handleChange}
+                                    margin="normal"
+                                    fullWidth
+                                    autoComplete="off"
+                                    required
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <TextField
+                                    id="message"
+                                    type="text"
+                                    label="Message"
+                                    value={this.state.messageContent.message}
+                                    onChange={this.handleChange}
+                                    margin="normal"
+                                    fullWidth
+                                    autoComplete="off"
+                                    multiline
+                                    rows="6"
+                                    required
+                                />
+                            </Grid>
+                            <Grid item xs={12} className="grid-item-text-center">
+                                <Button variant="outlined" size="large" onClick={this.sendEmail}>Send it</Button>
+                            </Grid>
                         </Grid>
                     </Grid>
-                </Grid>
-            </div>
+                </div>
+                <Dialog open={this.state.success} onClose={() => this.toggleDialog('success')}>
+                    <p>Victory!</p>
+                </Dialog>
+                <Dialog open={this.state.error} onClose={() => this.toggleDialog('error')}>
+                    <p>Error!</p>
+                </Dialog>
+            </>
         )
     }
 }
