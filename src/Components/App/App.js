@@ -41,7 +41,7 @@ class App extends Component {
             <Contact />
             <div className="grid-item-text-center">
               <Link activeClass="active" to="top" spy={true} smooth={true} offset={0} duration={1000} onSetActive={this.handleSetActive}>
-                <Icon id="upIcon">arrow_drop_down_circle</Icon>
+                <Icon id="upIcon">arrow_upward</Icon>
               </Link>
             </div>
           </div>

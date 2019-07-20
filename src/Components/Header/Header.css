@@ -21,6 +21,7 @@ div.MuiDrawer-paperAnchorTop a {
     text-transform: uppercase;
     letter-spacing: 3px;
     margin: 15px 0px;
+    cursor: pointer;
 }
 
 #header span {

@@ -70,7 +70,7 @@
 }
 #projects div {
     opacity: 1;
-    transition: .5s;
+    transition: .75s;
 }
 #projects div.hidden {
     opacity: 0;
