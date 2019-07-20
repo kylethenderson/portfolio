@@ -1,5 +1,11 @@
-#projects {
+/* #projects {
     background: linear-gradient(rgba(34, 34, 34, 1), rgba(34, 34, 34, 1), rgba(256, 256, 256, .05), rgba(34, 34, 34, 1));
+} */
+#projects div.odd {
+    background: linear-gradient(rgba(256, 256, 256, .05), rgba(34, 34, 34, 1));
+}
+#projects div.even {
+    background: linear-gradient(rgba(34, 34, 34, 1), rgba(256, 256, 256, .05));
 }
 #projects h1 {
     font-weight: 400;
@@ -12,11 +18,14 @@
     margin-bottom: 50px;
 }
 #projects .individual-project {
-    margin: 10px 0px;
+    padding: 10px 0px;
 }
 #projects .project-item {
     height: 300px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #projects .item-description {
     position: absolute;
@@ -24,20 +33,37 @@
     left: 0;
     padding: 5px 10px;
 }
-#projects img {
-    max-height: 100%;
-    max-width: 100%;
+#projects .item-description:hover {
+    cursor: pointer;
 }
-#projects h3 {
-    font-weight: 400;
-    letter-spacing: 2px;
+#projects .item-description span {
+    font-size: 12px;
+    position: relative;
+    top: 5px;
 }
-#projects p {
+#projects .item-description p {
     font-weight: 300;
     letter-spacing: .1rem;
     line-height: 1.25rem;
     font-size: .9rem;
     text-align: justify;
+    margin: 0;
+    margin-top: 10px;
+}
+#projects .item-description p:last-of-type {
+    position: relative;
+    top: 25px;
+}
+#projects img {
+    max-height: 100%;
+    max-width: 100%;
+}
+#projects h3 {
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    margin-bottom: 40px;
 }
 #projects a {
     color: rgba(256, 256, 256, .9);

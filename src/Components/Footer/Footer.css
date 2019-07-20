@@ -1,5 +1,22 @@
-footer {
+#footer {
     position: absolute;
     bottom: 0;
+    min-height: 50px;
     width: 100%;
+    background: linear-gradient(transparent, rgba(256, 256, 256, .075));
+}
+
+#footer h4 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0px 10px;
+    font-size: 14px;
+}
+#footer .social-link {
+    height: 30px;
+    width: 30px;
+    margin: 0px 10px;
+    position: relative;
+    top: 2px;
 }

@@ -16,10 +16,10 @@ class Intro extends Component {
                         <Grid item xs={12} className="grid-item-text-center">
                             <h1>Kyle Henderson</h1>
                         </Grid>
-                        <Grid item xs={10} md={4} className="grid-item-text-center">
+                        <Grid item xs={10} md={5} className="grid-item-text-center">
                             <h5>
-                                Some quick blurb here about who I am, what I am passionate about,
-                                and maybe a little about what I can do.
+                            Tenacious and inquisitive full stack developer who finds motivation through building projects and discovering how things work.
+                            Passionate about building solutions that move people and our planet forward. 
                             </h5>
                         </Grid>
                         <Grid item xs={12} className="grid-item-text-center">

@@ -24,7 +24,7 @@ class ProjectItem extends Component {
     render() {
         return (
             <>
-                <Grid container justify="center" className="individual-project">
+                <Grid className={this.state.even ? 'individual-project even' : 'individual-project odd'} container justify="center">
                     {this.state.even &&
                         <Grid item xs={12} md={4} className="project-item grid-item-text-center">
                             <img src={this.props.project.img} alt="Cleanup Meetup screenshot" />
@@ -38,13 +38,16 @@ class ProjectItem extends Component {
                             <p>
                                 {this.props.project.shortDesc}
                             </p>
+                            <span>Details...</span>
+                            <p>
+                                {this.props.project.url &&
+                                    <a href={this.props.project.url}>View</a>
+                                }
+                            </p>
                         </div>
                         <div className={this.state.mainInfo ? 'item-description hidden' : 'item-description'}>
                             <p>
                                 {this.props.project.longDesc}
-                                <br />
-                                <br />
-                                <a href="cleanup-meetup.herokuapp.com">View</a>
                             </p>
                         </div>
                     </Grid>
