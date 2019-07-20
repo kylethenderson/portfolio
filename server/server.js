@@ -3,10 +3,8 @@ const bodyParser = require('body-parser')
 
 const app = express();
 
-
-app.get('/testing', (req, res) => {
-    console.log('testing route hit');
-    res.send(200);
+app.post('/api/contact', (req, res) => {
+    res.sendStatus(200);
 })
 
 // Body parser middleware
