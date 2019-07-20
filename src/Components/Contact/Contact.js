@@ -38,7 +38,7 @@ class Contact extends Component {
 
     sendEmail = () => {
         // send message function here.
-        if (Object.keys(this.state.messageContent).every((key) => this.state.messageContent[key] !== '')) {
+        if (Object.keys(this.state.messageContent).every(key => this.state.messageContent[key] !== '')) {
             axios.post('/api/contact', this.state.messageContent)
                 .then(response => {
                     this.toggleDialog('success');

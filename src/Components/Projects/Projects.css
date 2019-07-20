@@ -1,6 +1,3 @@
-/* #projects {
-    background: linear-gradient(rgba(34, 34, 34, 1), rgba(34, 34, 34, 1), rgba(256, 256, 256, .05), rgba(34, 34, 34, 1));
-} */
 #projects div.odd {
     background: linear-gradient(rgba(256, 256, 256, .05), rgba(34, 34, 34, 1));
 }

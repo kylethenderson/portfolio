@@ -1,7 +1,8 @@
 #header {
     background-color: transparent;
-    position: relative;
-    top: 25px;
+}
+#menuIcon {
+    animation: slideIn 4s;
 }
 
 div.MuiDrawer-paperAnchorTop{
@@ -23,6 +24,9 @@ div.MuiDrawer-paperAnchorTop a {
 }
 
 #header span {
+    position: fixed;
+    top: 25px;
+    right: 25px;
     opacity: 1;
     transition: .375s;
     font-size: 2rem;
@@ -30,4 +34,19 @@ div.MuiDrawer-paperAnchorTop a {
 }
 #header span.hidden {
     opacity: 0
+}
+
+@keyframes slideIn {
+    0% {
+        right: 50px;
+        opacity: 0;
+    }
+    75% {
+        right: 50px;
+        opacity: 0;
+    }
+    100% {
+        right: 25;
+        opacity: 1;
+    }
 }

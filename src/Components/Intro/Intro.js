@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-scroll';
 
 // material ui components
 import Grid from '@material-ui/core/Grid'
@@ -18,12 +19,14 @@ class Intro extends Component {
                         </Grid>
                         <Grid item xs={10} md={5} className="grid-item-text-center">
                             <h5 id="summary">
-                            Tenacious and inquisitive full stack developer who finds motivation through building projects and discovering how things work.
-                            Passionate about building solutions that move people and our planet forward. 
+                                Tenacious and inquisitive full stack developer who finds motivation through building projects and discovering how things work.
+                                Passionate about building solutions that move people and our planet forward.
                             </h5>
                         </Grid>
                         <Grid item xs={12} className="grid-item-text-center">
-                            <Button variant="outlined">Projects</Button>
+                            <Link activeClass="active" to="projects" spy={true} smooth={true} offset={0} duration={750} onSetActive={this.handleSetActive}>
+                                <Button variant="outlined">Projects</Button>
+                            </Link>
                         </Grid>
                     </Grid>
                 </Grid>

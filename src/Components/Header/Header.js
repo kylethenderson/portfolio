@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 import Icon from '@material-ui/core/Icon'
 import Grid from '@material-ui/core/Grid'
 import Drawer from '@material-ui/core/Drawer'
-import { Link } from 'react-router-dom'
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 import './Header.css'
 
 class Header extends Component {
-    
+
     state = {
         drawerOpen: false,
     }
@@ -18,23 +18,27 @@ class Header extends Component {
         })
     }
 
+    scrollToTop = () => {
+        scroll.scrollToTop();
+    }
+
     render() {
         return (
             <div id="header">
                 <Grid container justify="flex-end">
                     <Grid item xs={1} className="grid-item-text-center">
-                        <Icon className={this.state.drawerOpen ? 'hidden' : ''} onClick={this.toggleDrawer}>menu</Icon>
+                        <Icon id="menuIcon" className={this.state.drawerOpen ? 'hidden' : ''} onClick={this.toggleDrawer}>menu</Icon>
                     </Grid>
                 </Grid>
                 <Drawer anchor="top" open={this.state.drawerOpen} onClose={this.toggleDrawer}>
-                    <Link to=''>
+                    <Link onClick={() => this.setState({ ...this.state, drawerOpen: !this.state.drawerOpen })} activeClass="active" to="projects" spy={true} smooth={true} offset={0} duration={750} onSetActive={this.handleSetActive}>
                         Projects
                     </Link>
-                    <Link to=''>
+                    <Link onClick={() => this.setState({ ...this.state, drawerOpen: !this.state.drawerOpen })} activeClass="active" to="contact" spy={true} smooth={true} offset={50} duration={1000} onSetActive={this.handleSetActive}>
                         Contact
                     </Link>
-                    <Link to=''>
-                        Blog
+                    <Link onClick={() => this.setState({ ...this.state, drawerOpen: !this.state.drawerOpen })} activeClass="active" to="top" spy={true} smooth={true} offset={0} duration={1000} onSetActive={this.handleSetActive}>
+                        Back to top
                     </Link>
                 </Drawer>
             </div>
