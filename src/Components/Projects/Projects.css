@@ -16,13 +16,17 @@
 }
 #projects .project-item {
     height: 300px;
+    position: relative;
+}
+#projects .item-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 10px;
 }
 #projects img {
     max-height: 100%;
     max-width: 100%;
-}
-#projects .grid-item-text-right {
-    text-align: right;
 }
 #projects h3 {
     font-weight: 400;
@@ -40,4 +44,11 @@
     text-decoration: none;
     border-bottom: 1px solid rgba(256, 256, 256, .9);
     text-transform: uppercase;
+}
+#projects div {
+    opacity: 1;
+    transition: .5s;
+}
+#projects div.hidden {
+    opacity: 0;
 }

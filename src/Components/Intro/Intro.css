@@ -33,7 +33,7 @@
     transition: .325s;
 }
 #intro button:hover {
-    box-shadow: 0px 0px 25px -5px rgba(256, 256, 256, .5);
+    box-shadow: 0px 0px 10px 0px rgba(256, 256, 256, .5);
     background-color: rgba(256, 256, 256, .1);
     color: white;
 }

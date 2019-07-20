@@ -26,32 +26,30 @@ class ProjectItem extends Component {
             <>
                 <Grid container justify="center" className="individual-project">
                     {this.state.even &&
-                        <Grid item xs={5} md={3} className="project-item grid-item-text-center">
+                        <Grid item xs={12} md={4} className="project-item grid-item-text-center">
                             <img src={this.props.project.img} alt="Cleanup Meetup screenshot" />
                         </Grid>
                     }
-                    <Grid onClick={() => this.setState({ mainInfo: !this.state.mainInfo })} item xs={7} md={4} className={!this.state.even ? 'project-item toggleable grid-item-text-right' : 'project-item toggleable'}>
-                        {
-                            this.state.mainInfo ?
-                                <>
-                                    <h3>
-                                        {this.props.project.title}
-                                    </h3>
-                                    <p>
-                                        {this.props.project.shortDesc}
-                                    </p>
-                                </>
-                                :
-                                <p>
-                                    {this.props.project.longDesc}
-                                    <br />
-                                    <br />
-                                    <a href="cleanup-meetup.herokuapp.com">View</a>
-                                </p>
-                        }
+                    <Grid onClick={() => this.setState({ mainInfo: !this.state.mainInfo })} item xs={12} md={4} className='project-item toggleable'>
+                        <div className={this.state.mainInfo ? 'item-description' : 'item-description hidden'}>
+                            <h3>
+                                {this.props.project.title}
+                            </h3>
+                            <p>
+                                {this.props.project.shortDesc}
+                            </p>
+                        </div>
+                        <div className={this.state.mainInfo ? 'item-description hidden' : 'item-description'}>
+                            <p>
+                                {this.props.project.longDesc}
+                                <br />
+                                <br />
+                                <a href="cleanup-meetup.herokuapp.com">View</a>
+                            </p>
+                        </div>
                     </Grid>
                     {!this.state.even &&
-                        <Grid item xs={5} md={4} className="project-item grid-item-text-center">
+                        <Grid item xs={12} md={4} className="project-item grid-item-text-center">
                             <img src={this.props.project.img} alt="Cleanup Meetup screenshot" />
                         </Grid>
                     }

@@ -34,17 +34,17 @@ class Projects extends Component {
                 img: KnightLogistics,
             },
             {
+                title: 'Swift Logistics',
+                shortDesc: 'short description',
+                longDesc: 'long description',
+                img: SwiftLogistics,
+            },
+            {
                 title: 'U-Knighted',
                 shortDesc: 'short description',
                 longDesc: 'long description',
                 img: UKnighted,
             },
-            {
-                title: 'Swift Logistics',
-                shortDesc: 'short description',
-                longDesc: 'long description',
-                img: SwiftLogistics,
-            }
         ]
     }
     render() {

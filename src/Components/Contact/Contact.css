@@ -9,5 +9,43 @@
     letter-spacing: 3px;
     text-transform: uppercase;
     font-size: 1.75rem;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
+}
+#contact p {
+    color: white;
+}
+label {
+    color: black !important;
+    padding-left: 5px !important;
+}
+.MuiOutlinedInput-input, .MuiOutlinedInput-multiline, textarea {
+    background-color: rgba(256, 256, 256, 1);
+    border-radius: 5px;
+}
+.MuiTextField-root, textarea{
+    background-color: rgba(256, 256, 256, 1);
+    border-radius: 5px;
+}
+
+label.Mui-focused {
+    color: rgba(34, 34, 34, .75) ;
+    letter-spacing: 1px;
+}
+.MuiInput-underline::after {
+    border: none !important;
+}
+
+#contact button {
+    border-color: rgba(256, 256, 256, .9);
+    color: rgba(256, 256, 256, .9);
+    margin-top: 40px;
+    letter-spacing: 2px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    transition: .325s;
+}
+#contact button:hover {
+    box-shadow: 0px 0px 10px 0px rgba(256, 256, 256, .5);
+    background-color: rgba(256, 256, 256, .1);
+    color: white;
 }
