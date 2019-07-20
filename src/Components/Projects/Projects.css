@@ -1,4 +1,6 @@
-
+#projects {
+    background: linear-gradient(rgba(34, 34, 34, 1), rgba(34, 34, 34, 1), rgba(256, 256, 256, .05), rgba(34, 34, 34, 1));
+}
 #projects h1 {
     font-weight: 400;
     border-bottom: 2px solid rgba(256, 256, 256, .75);
@@ -9,15 +11,33 @@
     font-size: 1.75rem;
     margin-bottom: 50px;
 }
-.left-project-item {
-    border: 1px solid rgba(256, 256, 256, .5);
-    height: 250px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+#projects .individual-project {
+    margin: 10px 0px;
 }
-.right-project-item {
-    border: 1px solid rgba(256, 256, 256, .5);
-    height: 250px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+#projects .project-item {
+    height: 300px;
+}
+#projects img {
+    max-height: 100%;
+    max-width: 100%;
+}
+#projects .grid-item-text-right {
+    text-align: right;
+}
+#projects h3 {
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+#projects p {
+    font-weight: 300;
+    letter-spacing: .1rem;
+    line-height: 1.25rem;
+    font-size: .9rem;
+    text-align: justify;
+}
+#projects a {
+    color: rgba(256, 256, 256, .9);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(256, 256, 256, .9);
+    text-transform: uppercase;
 }

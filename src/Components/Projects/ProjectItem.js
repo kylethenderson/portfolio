@@ -23,53 +23,40 @@ class ProjectItem extends Component {
     }
     render() {
         return (
-            <Grid container justify="center" className="individual-project">
-                {this.state.even ?
-                    <>
-                        <Grid item xs={5} md={4} className="left-project-item">
-                            <p>
-                                project image here {this.props.index + 1}
-                            </p>
+            <>
+                <Grid container justify="center" className="individual-project">
+                    {this.state.even &&
+                        <Grid item xs={5} md={3} className="project-item grid-item-text-center">
+                            <img src={this.props.project.img} alt="Cleanup Meetup screenshot" />
                         </Grid>
-                        <Grid onClick={() => this.setState({ mainInfo: !this.state.mainInfo })} item xs={7} md={5} className="right-project-item toggleable">
-                            {
-                                this.state.mainInfo ?
+                    }
+                    <Grid onClick={() => this.setState({ mainInfo: !this.state.mainInfo })} item xs={7} md={4} className={!this.state.even ? 'project-item toggleable grid-item-text-right' : 'project-item toggleable'}>
+                        {
+                            this.state.mainInfo ?
+                                <>
+                                    <h3>
+                                        {this.props.project.title}
+                                    </h3>
                                     <p>
-                                        project title and brief description here.
-                        </p>
-                                    :
-                                    <p>
-                                        longer description
-                        </p>
-                            }
-
+                                        {this.props.project.shortDesc}
+                                    </p>
+                                </>
+                                :
+                                <p>
+                                    {this.props.project.longDesc}
+                                    <br />
+                                    <br />
+                                    <a href="cleanup-meetup.herokuapp.com">View</a>
+                                </p>
+                        }
+                    </Grid>
+                    {!this.state.even &&
+                        <Grid item xs={5} md={4} className="project-item grid-item-text-center">
+                            <img src={this.props.project.img} alt="Cleanup Meetup screenshot" />
                         </Grid>
-                    </>
-                    :
-                    <>
-                        <Grid onClick={() => this.setState({ mainInfo: !this.state.mainInfo })} item xs={7} md={5} className="right-project-item toggleable">
-                            {
-                                this.state.mainInfo ?
-                                    <p>
-                                        project title and brief description here.
-                        </p>
-                                    :
-                                    <p>
-                                        longer description
-                        </p>
-                            }
-
-                        </Grid>
-                        <Grid item xs={5} md={4} className="left-project-item">
-                            <p>
-                                project image here {this.props.index + 1}
-                            </p>
-                        </Grid>
-                    </>
-                }
-
-
-            </Grid>
+                    }
+                </Grid>
+            </>
         )
     }
 }
