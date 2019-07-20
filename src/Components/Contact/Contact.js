@@ -65,11 +65,11 @@ class Contact extends Component {
         return (
             <>
                 <div id="contact">
-                    <Grid container justify="center" id="contact">
+                    <Grid container justify="center">
                         <Grid item xs={8} className="grid-item-text-center">
                             <h1 className="grid-item-text-center">
                                 Contact Me
-                    </h1>
+                            </h1>
                         </Grid>
                     </Grid>
                     <Grid container justify="center">

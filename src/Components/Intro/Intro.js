@@ -14,10 +14,10 @@ class Intro extends Component {
                 <Grid id="introGridWrapper" container justify="center" alignItems="center">
                     <Grid item xs={12} container justify="center">
                         <Grid item xs={12} className="grid-item-text-center">
-                            <h1>Kyle Henderson</h1>
+                            <h1 id="name">Kyle Henderson</h1>
                         </Grid>
                         <Grid item xs={10} md={5} className="grid-item-text-center">
-                            <h5>
+                            <h5 id="summary">
                             Tenacious and inquisitive full stack developer who finds motivation through building projects and discovering how things work.
                             Passionate about building solutions that move people and our planet forward. 
                             </h5>
