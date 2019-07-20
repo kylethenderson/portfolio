@@ -6,9 +6,9 @@ import Grid from '@material-ui/core/Grid'
 
 // import images
 import CleanupMeetup from '../../assets/cleanupmeetup.png'
-import KnightLogistics from '../../assets/knightlogistics.png'
+import KnightLogistics from '../../assets/knightlogistics.jpg'
 import UKnighted from '../../assets/uknighted.png'
-import SwiftLogistics from '../../assets/swiftlogistics.png'
+import SwiftLogistics from '../../assets/swiftlogistics.jpg'
 
 import './Projects.css'
 
