@@ -11,6 +11,7 @@ import Icon from '@material-ui/core/Icon'
 import Header from '../Header/Header'
 import Intro from '../Intro/Intro'
 import Projects from '../Projects/Projects'
+import Skills from '../Skills/Skills'
 import Contact from '../Contact/Contact'
 import Footer from '../Footer/Footer'
 
@@ -34,11 +35,14 @@ class App extends Component {
           <div id="mainContent">
             <Intro />
             <Element name="projects" className="element">
+              <Projects />
             </Element>
-            <Projects />
+            <Element name="skills" className="element">
+              <Skills />
+            </Element>
             <Element name="contact" className="element">
+              <Contact />
             </Element>
-            <Contact />
             <div className="grid-item-text-center">
               <Link activeClass="active" to="top" spy={true} smooth={true} offset={0} duration={1000} onSetActive={this.handleSetActive}>
                 <Icon id="upIcon">arrow_upward</Icon>

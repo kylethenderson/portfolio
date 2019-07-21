@@ -13,7 +13,7 @@
     text-transform: uppercase;
     letter-spacing: 6px;
     font-size: 2.75rem;
-    animation: fadeName 2s;
+    animation: fadeFirst 2s;
     position: relative;
 }
 
@@ -23,7 +23,7 @@
     line-height: 1.5rem;
     margin: 0;
     font-size: .9rem;
-    animation: fadeSummary 3s;
+    animation: fadeSecond 3s;
     position: relative;
 }
 
@@ -35,7 +35,7 @@
     padding: 10px 25px;
     border-radius: 10px;
     transition: .325s;
-    animation: fadeButton 4s;
+    animation: fadeThird 4s;
     position: relative;
 }
 #intro button:hover {
@@ -44,18 +44,7 @@
     color: white;
 }
 
-@keyframes fadeName{
-    0% {
-        opacity: 0;
-        top: 25px;
-    }
-    100% {
-        opacity: 1;
-        top: 0px;
-    }
-}
-
-@keyframes fadeSummary {
+@keyframes fadeFirst{
     0% {
         opacity: 0;
         top: 25px;
@@ -70,7 +59,21 @@
     }
 }
 
-@keyframes fadeButton {
+@keyframes fadeSecond {
+    0% {
+        opacity: 0;
+        top: 25px;
+    }
+    66% {
+        opacity: 0;
+        top: 25px;
+    }
+    100% {
+        opacity: 1;
+        top: 0px;
+    }
+}
+@keyframes fadeThird {
     0% {
         opacity: 0;
         top: 25px;
