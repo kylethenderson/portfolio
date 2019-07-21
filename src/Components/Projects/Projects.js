@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import ProjectItem from './ProjectItem'
+import ScrollAnimation from 'react-animate-on-scroll';
+
+import "animate.css/animate.min.css";
 
 // material ui components
 import Grid from '@material-ui/core/Grid'
@@ -66,7 +69,11 @@ class Projects extends Component {
                         <h1>Projects</h1>
                     </Grid>
                 </Grid>
-                {this.state.projects.map((project, index) => <ProjectItem key={index} project={project} index={index}/>)}
+                {this.state.projects.map((project, index) =>
+                    <ScrollAnimation key={index} animateIn="fadeIn">
+                        <ProjectItem project={project} index={index} />
+                    </ScrollAnimation>
+                )}
             </div>
         )
     }

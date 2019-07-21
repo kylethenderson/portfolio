@@ -2,16 +2,19 @@ import React, { Component } from 'react'
 import Grid from '@material-ui/core/Grid'
 import Chip from '@material-ui/core/Chip'
 
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
+
 import './Skills.css'
 
 class Skills extends Component {
 
     state = {
         skills: [
-                "JavaScript","HTML","CSS","React","Redux","Material UI",
-                "Node.js","Express","PostgreSQL","Vue.js","Vuex","Vuetify",
-                "Bootstrap", "MongoDB"
-            ]
+            "JavaScript", "HTML", "CSS", "React", "Redux", "Material UI",
+            "Node.js", "Express", "PostgreSQL", "Vue.js", "Vuex", "Vuetify",
+            "Bootstrap", "MongoDB"
+        ]
     }
     render() {
         return (
@@ -21,11 +24,13 @@ class Skills extends Component {
                         <h1>Skills</h1>
                     </Grid>
                 </Grid>
-                <Grid container justify="center">
-                    <Grid item xs={10} md={8} container justify="center">
-                        { this.state.skills.map(skill => <Chip key={skill} variant="outlined" label={skill} />)}
+                <ScrollAnimation animateIn="fadeIn">
+                    <Grid container justify="center">
+                        <Grid item xs={10} md={8} container justify="center">
+                            {this.state.skills.map(skill => <Chip key={skill} variant="outlined" label={skill} />)}
+                        </Grid>
                     </Grid>
-                </Grid>
+                </ScrollAnimation>
             </div>
         )
     }

@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
+
 // material ui components
 import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
@@ -54,7 +57,7 @@ class Contact extends Component {
                 })
                 .catch(error => {
                     console.log('There was an issue.', error);
-                })        
+                })
         }
         else {
             this.toggleDialog('error');
@@ -72,72 +75,74 @@ class Contact extends Component {
                             </h1>
                         </Grid>
                     </Grid>
-                    <Grid container justify="center">
-                        <Grid item xs={12} sm={9} md={6} container justify="center" id="inputWrapper">
-                            <Grid item xs={12} className="grid-item-text-center">
-                                <p>
-                                    I'm happy to answer any questions or inquiries
+                    <ScrollAnimation animateIn="fadeIn">
+                        <Grid container justify="center">
+                            <Grid item xs={12} sm={9} md={6} container justify="center" id="inputWrapper">
+                                <Grid item xs={12} className="grid-item-text-center">
+                                    <p>
+                                        I'm happy to answer any questions or inquiries
                             </p>
-                            </Grid>
-                            <Grid item xs={12}>
-                                <TextField
-                                    id="name"
-                                    label="Name"
-                                    type="text"
-                                    value={this.state.messageContent.name}
-                                    onChange={this.handleChange}
-                                    margin="normal"
-                                    fullWidth
-                                    autoComplete="off"
-                                    required
-                                />
-                            </Grid>
-                            <Grid item xs={12}>
-                                <TextField
-                                    id="email"
-                                    type="email"
-                                    label="Email"
-                                    value={this.state.messageContent.email}
-                                    onChange={this.handleChange}
-                                    margin="normal"
-                                    fullWidth
-                                    autoComplete="off"
-                                    required
-                                />
-                            </Grid>
-                            <Grid item xs={12}>
-                                <TextField
-                                    id="subject"
-                                    type="text"
-                                    label="Subject"
-                                    value={this.state.messageContent.subject}
-                                    onChange={this.handleChange}
-                                    margin="normal"
-                                    fullWidth
-                                    autoComplete="off"
-                                    required
-                                />
-                            </Grid>
-                            <Grid item xs={12}>
-                                <TextField
-                                    id="message"
-                                    type="text"
-                                    label="Message"
-                                    value={this.state.messageContent.message}
-                                    onChange={this.handleChange}
-                                    margin="normal"
-                                    fullWidth
-                                    autoComplete="off"
-                                    multiline
-                                    rows="6"
-                                    required
-                                />
-                            </Grid>
-                            <Grid item xs={12} className="grid-item-text-center">
-                                <Button variant="outlined" size="large" onClick={this.sendEmail}>Send it</Button>
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <TextField
+                                        id="name"
+                                        label="Name"
+                                        type="text"
+                                        value={this.state.messageContent.name}
+                                        onChange={this.handleChange}
+                                        margin="normal"
+                                        fullWidth
+                                        autoComplete="off"
+                                        required
+                                    />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <TextField
+                                        id="email"
+                                        type="email"
+                                        label="Email"
+                                        value={this.state.messageContent.email}
+                                        onChange={this.handleChange}
+                                        margin="normal"
+                                        fullWidth
+                                        autoComplete="off"
+                                        required
+                                    />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <TextField
+                                        id="subject"
+                                        type="text"
+                                        label="Subject"
+                                        value={this.state.messageContent.subject}
+                                        onChange={this.handleChange}
+                                        margin="normal"
+                                        fullWidth
+                                        autoComplete="off"
+                                        required
+                                    />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <TextField
+                                        id="message"
+                                        type="text"
+                                        label="Message"
+                                        value={this.state.messageContent.message}
+                                        onChange={this.handleChange}
+                                        margin="normal"
+                                        fullWidth
+                                        autoComplete="off"
+                                        multiline
+                                        rows="6"
+                                        required
+                                    />
+                                </Grid>
+                                <Grid item xs={12} className="grid-item-text-center">
+                                    <Button variant="outlined" size="large" onClick={this.sendEmail}>Send it</Button>
+                                </Grid>
                             </Grid>
                         </Grid>
-                    </Grid>
+                    </ScrollAnimation>
                 </div>
                 <Dialog open={this.state.success} onClose={() => this.toggleDialog('success')}>
                     <p>Victory!</p>
