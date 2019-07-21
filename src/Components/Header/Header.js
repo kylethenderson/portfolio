@@ -34,10 +34,13 @@ class Header extends Component {
                     <Link onClick={() => this.setState({ ...this.state, drawerOpen: !this.state.drawerOpen })} activeClass="active" to="projects" spy={true} smooth={true} offset={0} duration={750} onSetActive={this.handleSetActive}>
                         Projects
                     </Link>
-                    <Link onClick={() => this.setState({ ...this.state, drawerOpen: !this.state.drawerOpen })} activeClass="active" to="contact" spy={true} smooth={true} offset={75} duration={1000} onSetActive={this.handleSetActive}>
+                    <Link onClick={() => this.setState({ ...this.state, drawerOpen: !this.state.drawerOpen })} activeClass="active" to="skills" spy={true} smooth={true} offset={0} duration={1000} onSetActive={this.handleSetActive}>
+                        Skills
+                    </Link>
+                    <Link onClick={() => this.setState({ ...this.state, drawerOpen: !this.state.drawerOpen })} activeClass="active" to="contact" spy={true} smooth={true} offset={75} duration={1250} onSetActive={this.handleSetActive}>
                         Contact
                     </Link>
-                    <Link onClick={() => this.setState({ ...this.state, drawerOpen: !this.state.drawerOpen })} activeClass="active" to="top" spy={true} smooth={true} offset={0} duration={1000} onSetActive={this.handleSetActive}>
+                    <Link onClick={() => this.setState({ ...this.state, drawerOpen: !this.state.drawerOpen })} activeClass="active" to="top" spy={true} smooth={true} offset={0} duration={1250} onSetActive={this.handleSetActive}>
                         Top
                     </Link>
                 </Drawer>
