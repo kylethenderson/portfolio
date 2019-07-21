@@ -5,6 +5,7 @@ import { HashRouter as Router, Route } from 'react-router-dom'
 import { Element } from 'react-scroll'
 import { Link, animateScroll as scroll } from 'react-scroll';
 
+import Tooltip from '@material-ui/core/Tooltip'
 import Icon from '@material-ui/core/Icon'
 
 // Components
@@ -43,15 +44,15 @@ class App extends Component {
             <Element name="contact" className="element">
               <Contact />
             </Element>
-            <div className="grid-item-text-center">
-              <Link activeClass="active" to="top" spy={true} smooth={true} offset={0} duration={1000} onSetActive={this.handleSetActive}>
+            <Link activeClass="active" to="top" spy={true} smooth={true} offset={0} duration={1000} onSetActive={this.handleSetActive}>
+              <Tooltip title="Back to top">
                 <Icon id="upIcon">arrow_upward</Icon>
-              </Link>
-            </div>
+              </Tooltip>
+            </Link>
           </div>
           <Route path='/' component={Footer} />
         </Router>
-      </div>
+      </div >
     );
   }
 }

@@ -25,10 +25,10 @@ class Footer extends Component {
                 </Grid>
                 <Grid item xs={6} className="grid-item-text-center">
                     <Tooltip title="Github">
-                    <a href="https://github.com/kylethenderson"><img alt="github logo" className="social-link" src={Github} /></a>
+                        <a href="https://github.com/kylethenderson"><img alt="github logo" className="social-link" src={Github} /></a>
                     </Tooltip>
                     <Tooltip title="LinkedIn">
-                    <a href="https://linkedin.com/in/kylethenderson/"><img alt="linked in logo" className="social-link" src={Linkedin} /></a>
+                        <a href="https://linkedin.com/in/kylethenderson/"><img alt="linked in logo" className="social-link" src={Linkedin} /></a>
                     </Tooltip>
                     <Tooltip title="Resume">
                         <a href={Resume}><Icon>insert_drive_file</Icon></a>

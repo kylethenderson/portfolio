@@ -1,4 +1,7 @@
- #skills h1 {
+#skills {
+    padding: 100px 0px 50px 0px;
+} 
+#skills h1 {
     font-weight: 400;
     border-bottom: 2px solid rgba(256, 256, 256, .75);
     display: inline-block;
@@ -10,4 +13,11 @@
 }
 #skills p {
     color: white;
+}
+#skills .MuiChip-root {
+    margin: 10px 5px;
+    min-width: 125px;
+    border-color: rgba(256, 256, 256, .25);
+    color: rgba(256, 256, 256, .9);
+    font-size: 14px;
 }
