@@ -13,6 +13,7 @@ app.use(express.static('build'));
 // routes
 app.post('/api/contact', (req, res) => {
     console.log(req.body);
+    // this is where the email is sent from 
     res.sendStatus(200);
 })
 
