@@ -151,7 +151,7 @@ class Contact extends Component {
                             <h4>Woo-hoo!</h4>
                             <Icon className="contactDialogCloseIcon" onClick={() => this.toggleDialog('success')}>close</Icon>
                         </Grid>
-                        <Grid item xs={9}>
+                        <Grid item xs={9} className="grid-item-text-center">
                             <p>Thank you for your interest.</p>
                             <p>I'll get back with you soon!</p>
                         </Grid>
@@ -163,8 +163,9 @@ class Contact extends Component {
                             <h4>Oh No!</h4>
                             <Icon className="contactDialogCloseIcon" onClick={() => this.toggleDialog('error')}>close</Icon>
                         </Grid>
-                        <Grid item xs={9}>
-                            <p>Something went wrong. Did you fill out all the fields?</p>
+                        <Grid item xs={9} className="grid-item-text-center">
+                            <p>Something's amiss.</p>
+                            <p>Be sure to fill out all the fields.</p>
                         </Grid>
                     </Grid>
                 </Dialog>

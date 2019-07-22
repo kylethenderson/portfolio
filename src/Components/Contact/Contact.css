@@ -55,6 +55,7 @@ label.Mui-focused {
 .MuiDialog-paper {
     min-height: 150px;
     min-width: 300px;
+    border-radius: 15px !important;
 }
 .contactDialogCloseIcon {
     position: absolute;
@@ -62,8 +63,12 @@ label.Mui-focused {
     right: 10px;
 }
 .contactDialog h4 {
-    padding: 15px 0px;
+    padding-top: 15px;
+    padding-bottom: 25px;
     margin: 0;
     font-weight: 400;
     font-size: 1.25rem;
+}
+.contactDialog p {
+    margin: 5px 0px;
 }
