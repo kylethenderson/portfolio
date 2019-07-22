@@ -39,7 +39,7 @@ class Projects extends Component {
                     The site is built in HTML, CSS, JavaScript, jQuery, and Bootstrap 4 for a clean, responsive UI. Site forms are tied to
                     a RESTful api built with Node.js and Express.`,
                 img: KnightLogistics,
-                url: 'https://knightlogistics.com',
+                url: 'http://knightlogistics.com',
             },
             {
                 title: 'Swift Logistics',
@@ -48,7 +48,7 @@ class Projects extends Component {
                     The site is built in HTML, CSS, JavaScript, jQuery, and Bootstrap 4 for a clean, responsive UI. Site forms are tied to
                     a RESTful api built with Node.js and Express.`,
                 img: SwiftLogistics,
-                url: 'https://swiftlogistics.com',
+                url: 'http://swiftlogistics.com',
             },
             {
                 title: 'U-Knighted',
