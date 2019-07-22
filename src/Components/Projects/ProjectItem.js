@@ -27,7 +27,7 @@ class ProjectItem extends Component {
                 <Grid className={this.state.even ? 'individual-project even' : 'individual-project odd'} container justify="center">
                     {this.state.even &&
                         <Grid item xs={12} md={4} className="project-item grid-item-text-center">
-                            <img src={this.props.project.img} alt="Cleanup Meetup screenshot" />
+                            <img src={this.props.project.img} alt={this.props.project.title} />
                         </Grid>
                     }
                     <Grid onClick={() => this.setState({ mainInfo: !this.state.mainInfo })} item xs={12} md={4} className='project-item toggleable'>

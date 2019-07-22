@@ -1,9 +1,9 @@
-#projects div.odd {
+/* #projects div.odd {
     background: linear-gradient(rgba(256, 256, 256, .05), rgba(34, 34, 34, 1));
 }
 #projects div.even {
     background: linear-gradient(rgba(34, 34, 34, 1), rgba(256, 256, 256, .05));
-}
+} */
 #projects h1 {
     font-weight: 300;
     display: inline-block;

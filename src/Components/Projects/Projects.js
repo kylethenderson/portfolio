@@ -8,7 +8,7 @@ import "animate.css/animate.min.css";
 import Grid from '@material-ui/core/Grid'
 
 // import images
-import CleanupMeetup from '../../assets/cleanupmeetup.png'
+// import CleanupMeetup from '../../assets/cleanupmeetup.png'
 import KnightLogistics from '../../assets/knightlogistics.jpg'
 import UKnighted from '../../assets/uknighted.png'
 import SwiftLogistics from '../../assets/swiftlogistics.jpg'
@@ -29,7 +29,7 @@ class Projects extends Component {
                     I wanted to build an application that would let users mark areas on a map that need some TLC, and which would encourage people clean up those areas.
                     The front end of this application is built with React, Redux, Material-UI, and utilizes the GoogleMaps API. Its powered by a Node.js and Express server that
                     is connected to a PostgreSQL database.`,
-                img: CleanupMeetup,
+                img: 'https://media.giphy.com/media/f4DjVWqj6HaRIXgWQD/giphy.gif',
                 url: 'https://cleanup-meetup.herokuapp.com',
             },
             {
@@ -40,6 +40,13 @@ class Projects extends Component {
                     a RESTful api built with Node.js and Express.`,
                 img: KnightLogistics,
                 url: 'http://knightlogistics.com',
+            },
+            {
+                title: 'Feedback Form',
+                shortDesc: 'A daily feedback for for how you are feeling.',
+                longDesc: `Built with React, Redux, Node.js, Express, and PostgreSQL.`,
+                img: 'https://media.giphy.com/media/hqOvgKvRj8vo1R3zJM/giphy.gif',
+                url: null,
             },
             {
                 title: 'Swift Logistics',
