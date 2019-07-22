@@ -5,6 +5,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
 
 // material ui components
+import Icon from '@material-ui/core/Icon'
 import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
@@ -144,11 +145,28 @@ class Contact extends Component {
                         </Grid>
                     </ScrollAnimation>
                 </div>
-                <Dialog open={this.state.success} onClose={() => this.toggleDialog('success')}>
-                    <p>Victory!</p>
+                <Dialog className="contactDialog" open={this.state.success} onClose={() => this.toggleDialog('success')}>
+                    <Grid container justify="center">
+                        <Grid item xs={12} className="grid-item-text-center">
+                            <h4>Woo-hoo!</h4>
+                            <Icon className="contactDialogCloseIcon" onClick={() => this.toggleDialog('success')}>close</Icon>
+                        </Grid>
+                        <Grid item xs={9}>
+                            <p>Thank you for your interest.</p>
+                            <p>I'll get back with you soon!</p>
+                        </Grid>
+                    </Grid>
                 </Dialog>
-                <Dialog open={this.state.error} onClose={() => this.toggleDialog('error')}>
-                    <p>Error!</p>
+                <Dialog className="contactDialog" open={this.state.error} onClose={() => this.toggleDialog('error')}>
+                    <Grid container justify="center">
+                        <Grid item xs={11} className="grid-item-text-center">
+                            <h4>Oh No!</h4>
+                            <Icon className="contactDialogCloseIcon" onClick={() => this.toggleDialog('error')}>close</Icon>
+                        </Grid>
+                        <Grid item xs={9}>
+                            <p>Something went wrong. Did you fill out all the fields?</p>
+                        </Grid>
+                    </Grid>
                 </Dialog>
             </>
         )

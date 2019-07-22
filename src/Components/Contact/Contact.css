@@ -26,6 +26,9 @@ label {
     background-color: rgba(256, 256, 256, 1);
     border-radius: 5px;
 }
+#contact input, #contact textarea {
+    padding-left: 10px;
+}
 
 label.Mui-focused {
     color: rgba(34, 34, 34, .75) ;
@@ -48,4 +51,19 @@ label.Mui-focused {
     box-shadow: 0px 0px 10px 0px rgba(256, 256, 256, .5);
     background-color: rgba(256, 256, 256, .1);
     color: white;
+}
+.MuiDialog-paper {
+    min-height: 150px;
+    min-width: 300px;
+}
+.contactDialogCloseIcon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.contactDialog h4 {
+    padding: 15px 0px;
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.25rem;
 }
