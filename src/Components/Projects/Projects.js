@@ -43,9 +43,10 @@ class Projects extends Component {
             },
             {
                 title: 'Feedback Form',
-                shortDesc: 'A daily feedback for for how you are feeling.',
-                longDesc: `Built with React, Redux, Node.js, Express, and PostgreSQL.`,
-                img: 'https://media.giphy.com/media/hqOvgKvRj8vo1R3zJM/giphy.gif',
+                shortDesc: 'We want to know how you are feeling today.',
+                longDesc: `A feedback form to let us know how you are feeling today. Front end built with React, Redux, and Material UI. Server side build on Node.js and Express
+                    connected to a PostgreSQL database.`,
+                img: 'https://media.giphy.com/media/iJDv9aD3GRCMij0Kkq/giphy.gif',
                 url: null,
             },
             {
@@ -56,6 +57,14 @@ class Projects extends Component {
                     a RESTful api built with Node.js and Express.`,
                 img: SwiftLogistics,
                 url: 'http://swiftlogistics.com',
+            },
+            {
+                title: 'Movie Magic',
+                shortDesc: 'If I were to build an app that would list movies, a description, and their genres, what would that look like?',
+                longDesc: `It would look something like this! Front end UI built with React, Redux, Redux-Sagas, and Material UI. Server
+                    side functionality handled by an Express server built on Node.js all connected to a PostgreSQL database to handle all the deets.`,
+                img: 'https://media.giphy.com/media/QxZGLQWO03Quml8Srz/giphy.gif',
+                url: null,
             },
             {
                 title: 'U-Knighted',
