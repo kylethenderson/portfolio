@@ -1,7 +1,13 @@
 # Kyle T Henderson Portfolio
 
-## 
+## View
+    Site available at:
+
+    kylethenderson.com
+
 ## Setup
+
+To run the code locally, 
 
 Clone the following repository
 
@@ -14,5 +20,9 @@ Navigate to the directory and run the following:
     npm run server
 
     npm run client
+
+## Authors:
+
+Kyle Henderson - Frontend UI and server side email handling
 
 
