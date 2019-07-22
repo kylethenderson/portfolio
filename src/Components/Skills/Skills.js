@@ -26,7 +26,7 @@ class Skills extends Component {
                 </Grid>
                 <ScrollAnimation animateIn="fadeIn">
                     <Grid container justify="center">
-                        <Grid item xs={10} md={8} container justify="center">
+                        <Grid item xs={10} md={6} container justify="center">
                             {this.state.skills.map(skill => <Chip key={skill} variant="outlined" label={skill} />)}
                         </Grid>
                     </Grid>
