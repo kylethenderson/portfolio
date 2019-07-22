@@ -31,7 +31,7 @@ class Footer extends Component {
                         <a href="https://linkedin.com/in/kylethenderson/"><img alt="linked in logo" className="social-link" src={Linkedin} /></a>
                     </Tooltip>
                     <Tooltip title="Resume">
-                        <a target="_blank" href={Resume}><Icon>insert_drive_file</Icon></a>
+                        <a href={Resume}><Icon>insert_drive_file</Icon></a>
                     </Tooltip>
                 </Grid>
                 <Grid item xs={3} className="grid-item-text-right">
