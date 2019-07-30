@@ -4,6 +4,8 @@ import Grid from '@material-ui/core/Grid'
 import Drawer from '@material-ui/core/Drawer'
 import { Link, animateScroll as scroll } from 'react-scroll';
 
+import Tooltip from '@material-ui/core/Tooltip'
+
 import './Header.css'
 
 class Header extends Component {
@@ -27,7 +29,9 @@ class Header extends Component {
             <div id="header">
                 <Grid container justify="flex-end">
                     <Grid item xs={1} className="grid-item-text-center">
-                        <Icon id="menuIcon" className={this.state.drawerOpen ? 'hidden' : ''} onClick={this.toggleDrawer}>menu</Icon>
+                        <Tooltip title="Menu">
+                            <Icon id="menuIcon" onClick={this.toggleDrawer}>menu</Icon>
+                        </Tooltip>
                     </Grid>
                 </Grid>
                 <Drawer anchor="top" open={this.state.drawerOpen} onClose={this.toggleDrawer}>
@@ -37,7 +41,7 @@ class Header extends Component {
                     <Link onClick={() => this.setState({ ...this.state, drawerOpen: !this.state.drawerOpen })} activeClass="active" to="skills" spy={true} smooth={true} offset={75} duration={1000} onSetActive={this.handleSetActive}>
                         Skills
                     </Link>
-                    <Link onClick={() => this.setState({ ...this.state, drawerOpen: !this.state.drawerOpen })} activeClass="active" to="contact" spy={true} smooth={true} offset={75} duration={1250} onSetActive={this.handleSetActive}>
+                    <Link onClick={() => this.setState({ ...this.state, drawerOpen: !this.state.drawerOpen })} activeClass="active" to="contact" spy={true} smooth={true} offset={325} duration={1250} onSetActive={this.handleSetActive}>
                         Contact
                     </Link>
                 </Drawer>

@@ -3,6 +3,10 @@
 }
 #menuIcon {
     animation: slideIn 4s;
+    z-index: 1000;
+}
+#menuIcon:hover {
+    cursor: pointer;
 }
 
 div.MuiDrawer-paperAnchorTop{
