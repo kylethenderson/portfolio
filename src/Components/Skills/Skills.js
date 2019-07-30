@@ -19,15 +19,16 @@ class Skills extends Component {
     render() {
         return (
             <div id="skills">
-                <Grid container justify="center">
-                    <Grid item xs={6} className="grid-item-text-center">
-                        <h1>Skills</h1>
-                    </Grid>
-                </Grid>
                 <ScrollAnimation animateIn="fadeIn">
-                    <Grid container justify="center">
-                        <Grid item xs={10} md={6} container justify="center">
-                            {this.state.skills.map(skill => <Chip key={skill} variant="outlined" label={skill} />)}
+
+                    <Grid style={{height: '80vh'}} container justify="center" alignItems="center">
+                        <Grid item xs={12} container justify="center">
+                            <Grid item xs={12} className="grid-item-text-center">
+                                <h1>Skills</h1>
+                            </Grid>
+                            <Grid item xs={10} md={8} className="grid-item-text-center">
+                                {this.state.skills.map(skill => <Chip key={skill} variant="outlined" label={skill} />)}
+                            </Grid>
                         </Grid>
                     </Grid>
                 </ScrollAnimation>

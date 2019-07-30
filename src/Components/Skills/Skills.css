@@ -1,5 +1,7 @@
 #skills {
-    padding: 100px 0px 50px 0px;
+    background: linear-gradient(rgba(34, 34, 34, .75),rgba(34, 34, 34, .825), rgba(34, 34, 34, .75)), url("../../assets/background.jpg") no-repeat center; 
+    background-size: cover; 
+    background-attachment: fixed;
 } 
 #skills h1 {
     font-weight: 300;
@@ -16,7 +18,8 @@
 #skills .MuiChip-root {
     margin: 10px 5px;
     min-width: 125px;
-    border-color: rgba(256, 256, 256, .25);
+    border-color: rgba(256, 256, 256, .5);
     color: rgba(256, 256, 256, .9);
-    font-size: 14px;
+    font-size: 15px;
+    letter-spacing: 1px;
 }

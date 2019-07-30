@@ -1,8 +1,8 @@
 #footer {
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
+    width: 100%; */
     min-height: 50px;
-    width: 100%;
     background: linear-gradient(transparent, rgba(256, 256, 256, .075));
 }
 

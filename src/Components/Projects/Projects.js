@@ -59,14 +59,6 @@ class Projects extends Component {
                 url: 'http://swiftlogistics.com',
             },
             {
-                title: 'Movie Magic',
-                shortDesc: 'If I were to build an app that would list movies, a description, and their genres, what would that look like?',
-                longDesc: `It would look something like this! Front end UI built with React, Redux, Redux-Sagas, and Material UI. Server
-                    side functionality handled by an Express server built on Node.js all connected to a PostgreSQL database to handle all the deets.`,
-                img: 'https://media.giphy.com/media/QxZGLQWO03Quml8Srz/giphy.gif',
-                url: null,
-            },
-            {
                 title: 'U-Knighted',
                 shortDesc: 'A benefits program tailored to solve concerns that truck owners face on a daily basis on the road.',
                 longDesc: `In an effort to reduce waste, increase efficiencies, and consolidate workflow, I designed and built
@@ -81,7 +73,7 @@ class Projects extends Component {
         return (
             <div id="projects">
                 <Grid container justify="center">
-                    <Grid item xs={6} className="grid-item-text-center">
+                    <Grid item xs={12} md={6} className="grid-item-text-center">
                         <h1>Projects</h1>
                     </Grid>
                 </Grid>

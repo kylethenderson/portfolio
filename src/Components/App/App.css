@@ -1,15 +1,14 @@
 .app {
-    height: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(34, 34, 34, .75),rgba(34, 34, 34, .825), rgba(34, 34, 34, .75)), url("../../assets/background.jpg") no-repeat center; 
+    background-size: cover; 
+    background-attachment: fixed;
 }
 .grid-item-text-center {
     text-align: center;
 }
 .grid-item-text-right {
     text-align: right;
-}
-
-#mainContent {
-    padding-bottom: 100px;
 }
 
 #upIcon {

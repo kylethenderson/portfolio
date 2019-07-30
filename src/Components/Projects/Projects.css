@@ -4,6 +4,9 @@
 #projects div.even {
     background: linear-gradient(rgba(34, 34, 34, 1), rgba(256, 256, 256, .05));
 } */
+#projects {
+    padding: 50px 0px;
+}
 #projects h1 {
     font-weight: 300;
     display: inline-block;
